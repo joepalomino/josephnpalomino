@@ -6,6 +6,10 @@ import { hot } from 'react-hot-loader'
 import Routes from 'react-static-routes'
 
 injectGlobal`
+
+  * {
+    box-sizing: border-box;
+  }
   body {
     font-family: 'Merriweather', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial,
       'Lucida Grande', sans-serif;
@@ -58,7 +62,7 @@ const App = () => (
         className="content"
       >
         <div>
-          <h1 css={{ fontSize: '5rem' }}>Joseph N. Palomino</h1>
+          <h1 css={{ fontSize: '4.5rem' }}>Joseph N. Palomino</h1>
           <p css={{ fontFamily: 'lato' }}>Too busy making awesome things</p>
         </div>
       </div>
