@@ -63,7 +63,10 @@ const App = () => (
       >
         <div>
           <h1 css={{ fontSize: '4.5rem' }}>Joseph N. Palomino</h1>
-          <p css={{ fontFamily: 'lato' }}>Too busy making awesome things</p>
+          <p css={{ fontFamily: 'lato' }}>
+            Passionate about making software that people enjoy using
+          </p>
+          <a href="mailto:palominojoen@gmail.com">palominojoen@gmail.com</a>
         </div>
       </div>
     </AppStyles>
