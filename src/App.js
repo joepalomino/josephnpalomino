@@ -1,17 +1,26 @@
 import React from 'react'
-import { Router, Link } from 'react-static'
+import { Router, Link, Head } from 'react-static'
 import styled, { injectGlobal } from 'react-emotion'
 import { hot } from 'react-hot-loader'
+
 //
 import Routes from 'react-static-routes'
+import Footer from './containers/Components/Footer'
+import Container from './containers/Components/Container'
 
 injectGlobal`
 
   * {
     box-sizing: border-box;
   }
+
+  html {
+    overflow-x: hidden;
+  }
+  
   body {
-    font-family: 'Merriweather', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial,
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
       'Lucida Grande', sans-serif;
     font-weight: 300;
     font-size: 16px;
@@ -19,6 +28,15 @@ injectGlobal`
     padding: 0;
     color: rgba(0,0,0,0.84
     )
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    list-style: none;
   }
 `
 
@@ -31,7 +49,6 @@ const AppStyles = styled.div`
 
   nav {
     width: 100%;
-    background: #108db8;
 
     a {
       color: white;
@@ -40,35 +57,28 @@ const AppStyles = styled.div`
     }
   }
 
-  .content {
-    padding: 1rem;
-  }
-
   img {
     max-width: 100%;
+  }
+
+  h1 {
+    font-size: 1.65rem;
+    line-height: 1.4;
+  }
+
+  h2: {
+    font-size: 1.2rem;
   }
 `
 
 const App = () => (
   <Router>
     <AppStyles>
-      <div
-        css={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          textAlign: 'center',
-        }}
-        className="content"
-      >
-        <div>
-          <h1 css={{ fontSize: '4.5rem' }}>Joseph N. Palomino</h1>
-          <p css={{ fontFamily: 'lato' }}>
-            Passionate about making software that people enjoy using
-          </p>
-          <a href="mailto:palominojoen@gmail.com">palominojoen@gmail.com</a>
-        </div>
-      </div>
+      <Container>
+        <p>logo</p>
+      </Container>
+      <Routes />
+      <Footer />
     </AppStyles>
   </Router>
 )
