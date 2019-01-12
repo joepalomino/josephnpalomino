@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Router, Link, Head } from 'react-static'
 import styled, { injectGlobal } from 'react-emotion'
 import { hot } from 'react-hot-loader'
+import { Transition, animated } from 'react-spring'
 
 //
 import Routes from 'react-static-routes'
-import Footer from './containers/Components/Footer'
-import Container from './containers/Components/Container'
+import Footer from './Components/Footer'
+import Container from './Components/Container'
+import Logo from './Components/Logo'
+import Cta from './Components/Cta'
 
 injectGlobal`
 
@@ -41,20 +44,10 @@ injectGlobal`
 `
 
 const AppStyles = styled.div`
+  min-height: 100vh;
   a {
     text-decoration: none;
-    color: #108db8;
     font-weight: bold;
-  }
-
-  nav {
-    width: 100%;
-
-    a {
-      color: white;
-      padding: 1rem;
-      display: inline-block;
-    }
   }
 
   img {
@@ -62,7 +55,7 @@ const AppStyles = styled.div`
   }
 
   h1 {
-    font-size: 1.65rem;
+    font-size: 1.5rem;
     line-height: 1.4;
   }
 
@@ -71,16 +64,51 @@ const AppStyles = styled.div`
   }
 `
 
-const App = () => (
-  <Router>
-    <AppStyles>
-      <Container>
-        <p>logo</p>
-      </Container>
-      <Routes />
-      <Footer />
-    </AppStyles>
-  </Router>
-)
+const NavCta = styled(Cta)`
+  display: none;
+  @media (min-width: 768px) {
+    display: flex;
+  }
+`
+
+function App() {
+  return (
+    <Router>
+      <AppStyles>
+        <Container>
+          <div
+            css={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              maxWidth: 1100,
+              margin: 'auto',
+            }}
+          >
+            <Logo />
+            <div css={{ display: 'flex' }}>
+              <p
+                css={{
+                  fontSize: '.75rem',
+                  borderTop: '5px solid #000',
+                  '@media (min-width: 768px)': {
+                    textAlign: 'right',
+                    marginRight: '1rem',
+                    width: 300,
+                  },
+                }}
+              >
+                40°18'51.3"N 111°45'25.6"W
+              </p>
+              <NavCta />
+            </div>
+          </div>
+        </Container>
+        <Routes />
+        <Footer />
+      </AppStyles>
+    </Router>
+  )
+}
 
 export default hot(module)(App)
