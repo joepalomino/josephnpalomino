@@ -56,7 +56,21 @@ export default function About(props) {
           </div>
         </div>
 
-        <p css={{ marginTop: '11rem', lineHeight: 1.5, marginBottom: '2rem' }}>{text}</p>
+        <p css={{ marginTop: '11rem', lineHeight: 1.5 }}>
+          I have a combined 6 years in data analytics and software engineering. I started by
+          understanding people’s shopping behaviors at Walmart to shaping experiences for people
+          shopping online within the health and beauty world. I’ve designed and built apps, landing
+          pages, websites, developer tools, emails and APIs.
+        </p>
+        <p>
+          As a developer my enthusiasm lies in creating products that real people enjoy using. To do
+          this, I come equipped with empathy grounded in user sensibilities, a persistent dedication
+          towards producing better work and an easy going, ego-free approach towards my peers.
+        </p>
+        <p>
+          I’m currently a full time member of The Hut Group’s engineering team. I also do freelance
+          on the side with RenderCake.
+        </p>
       </Container>
       <img
         src={flowerWave}

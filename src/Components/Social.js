@@ -8,9 +8,15 @@ export default function Social(props) {
   return (
     <div>
       <div css={{ display: 'flex', justifyContent: 'flex-end' }}>
-        <FaTwitter css={{ fill, marginRight, fontSize }} />
-        <FaInstagram css={{ fill, marginRight, fontSize }} />
-        <FaGithub css={{ fill, marginRight, fontSize }} />
+        <a href="https://twitter.com/joenpalomino" onClick={e => e.stopPropagation()}>
+          <FaTwitter css={{ fill, marginRight, fontSize }} onClick={e => e.stopPropagation()} />
+        </a>
+        <a href="https://www.instagram.com/joe_pal/">
+          <FaInstagram css={{ fill, marginRight, fontSize }} onClick={e => e.stopPropagation()} />
+        </a>
+        <a href="https://github.com/joepalomino">
+          <FaGithub css={{ fill, marginRight, fontSize }} onClick={e => e.stopPropagation()} />
+        </a>
       </div>
     </div>
   )

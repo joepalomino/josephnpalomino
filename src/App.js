@@ -62,6 +62,12 @@ const AppStyles = styled.div`
   h2: {
     font-size: 1.2rem;
   }
+
+  p {
+    @media (min-width: 768px) {
+      font-size: 1.6rem;
+    }
+  }
 `
 
 const NavCta = styled(Cta)`
@@ -80,13 +86,13 @@ function App() {
             css={{
               display: 'flex',
               justifyContent: 'space-between',
-              alignItems: 'center',
+              alignItems: 'flex-start',
               maxWidth: 1100,
               margin: 'auto',
             }}
           >
             <Logo />
-            <div css={{ display: 'flex' }}>
+            <div css={{ display: 'flex', alignItems: 'center' }}>
               <p
                 css={{
                   fontSize: '.75rem',
@@ -95,6 +101,7 @@ function App() {
                     textAlign: 'right',
                     marginRight: '1rem',
                     width: 300,
+                    fontSize: '1.2rem !important',
                   },
                 }}
               >

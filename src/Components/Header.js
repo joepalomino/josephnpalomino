@@ -71,7 +71,7 @@ export default function Header(props) {
           css={{
             marginTop: '5rem',
             '@media (min-width: 768px)': {
-              fontSize: '2.5rem',
+              fontSize: '2.1rem !important',
             },
           }}
         >

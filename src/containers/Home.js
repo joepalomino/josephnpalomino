@@ -1,16 +1,11 @@
 import React, { Component } from 'react'
 import { Transition, animated } from 'react-spring'
-
-import Header from '../Components/Header'
-import Nav from '../Components/Nav'
+import { FaCircle } from 'react-icons/fa'
 //
 import Skills from '../Components/Skills'
 import About from '../Components/About'
-import Divider from '../Components/Divider'
-import styled from 'react-emotion'
-import { FaCircle } from 'react-icons/fa'
+
 import Hero from '../Components/Hero'
-import flower from '../flower.jpg'
 
 const skillsList = [
   { skill: 'Frontend', experience: 100 },
@@ -19,47 +14,25 @@ const skillsList = [
   { skill: 'Databases', experience: 50 },
 ]
 
-const screens = [
-  style => (
-    <animated.div style={{ ...style }}>
-      <Hero />
-    </animated.div>
-  ),
-
-  style => (
-    <animated.div style={{ ...style }}>
-      <Skills
-        list={[
-          'Frontend',
-          'UX/UI',
-          'Backend',
-          'React',
-          'Vanila',
-          'APIs',
-          'Node',
-          'PHP',
-          'CSS',
-          'Mysql',
-          'GraphQl',
-        ]}
-      />
-    </animated.div>
-  ),
-  style => (
-    <animated.div style={{ ...style }}>
-      <About text="I’m Joe, Some catchy subline that will help me convey everything that help people get a feel for who I am and what I do. I’m Joe, Some catchy subline that will help me convey everything that help people get a feel for who I am and what I do" />
-    </animated.div>
-  ),
-]
-
 const testScreens = [
   { comp: Hero, props: {} },
-  { comp: Skills, props: { list: skillsList } },
+  {
+    comp: Skills,
+    props: {
+      topList: skillsList,
+      bottomList: [
+        { skill: 'React', experience: 100 },
+        { skill: 'Node', experience: 80 },
+        { skill: 'GraphQl', experience: 65 },
+        { skill: 'PHP', experience: 70 },
+      ],
+    },
+  },
   {
     comp: About,
     props: {
       text:
-        'I’m Joe, Some catchy subline that will help me convey everything that help people get a feel for who I am and what I do. I’m Joe, Some catchy subline that will help me convey everything that help people get a feel for who I am and what I do',
+        'I have a combined 6 years in data analytics and software engineering.\n\n I started by understanding people’s shopping behaviors at Walmart to shaping experiences for  people shopping online within the health and beauty world. I’ve designed and built apps, landing pages, websites, developer tools, emails and APIs. As a developer my enthusiasm lies in creating products that real people enjoy using. To do this, I come equipped with empathy grounded in user sensibilities, a persistent dedication towards producing better work and an easy going, ego-free approach towards my peers. I’m currently a full time member of The Hut Group’s engineering team. I also do freelance on the side with RenderCake.',
     },
   },
 ]
@@ -77,7 +50,10 @@ export default class Home extends Component {
             height: 'calc(100% - 38px)',
             position: 'relative',
             width: '100%',
-            height: 600,
+            height: this.state.index === 0 ? 685 : this.state.index === 1 ? 600 : 920,
+            '@media (min-width: 768px)': {
+              height: 600,
+            },
             '&>div': {
               willChange: 'transorm, opacity',
               position: 'absolute',

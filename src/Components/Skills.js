@@ -39,7 +39,7 @@ const BarDivider = styled.div`
   }
 `
 export default function Skills(props) {
-  const { list } = props
+  const { topList, bottomList } = props
   return (
     <section>
       <Container css={{ paddingTop: '3.4rem', maxWidth: 1100, margin: 'auto' }}>
@@ -54,6 +54,9 @@ export default function Skills(props) {
           />
           <h2>Skills</h2>
         </div>
+        <p css={{ marginTop: 0, marginBottom: '2.5rem' }}>
+          "Don't ask what the world can offer you, but what can you offer the world?"{' '}
+        </p>
         <div css={{ maxWidth: 800, margin: 'auto' }}>
           <div
             css={{
@@ -64,7 +67,7 @@ export default function Skills(props) {
               marginTop: '1rem',
             }}
           >
-            {list.map(({ skill, experience }) => (
+            {topList.map(({ skill, experience }) => (
               <div key={skill}>
                 <div
                   css={{
@@ -92,7 +95,7 @@ export default function Skills(props) {
               justifyItems: 'center',
             }}
           >
-            {list.map(({ skill, experience }) => (
+            {bottomList.map(({ skill, experience }) => (
               <div key={skill}>
                 <div>{skill}</div>
                 <div
