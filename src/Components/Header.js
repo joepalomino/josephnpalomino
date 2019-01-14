@@ -31,7 +31,7 @@ export default function Header(props) {
           alt="flower-background"
           css={{
             borderRadius: '10px',
-            height: 426,
+            height: 456,
             opacity: '.25',
             '@media (min-width: 768px)': {
               width: 400,
