@@ -55,7 +55,7 @@ export default function Skills(props) {
           <h2>Skills</h2>
         </div>
         <p css={{ marginTop: 0, marginBottom: '2.5rem' }}>
-          "Don't ask what the world can offer you, but what can you offer the world?"{' '}
+          "Don't ask what the world can offer you, but what you can offer the world?"{' '}
         </p>
         <div css={{ maxWidth: 800, margin: 'auto' }}>
           <div
