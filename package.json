@@ -12,10 +12,14 @@
   "dependencies": {
     "axios": "^0.16.2",
     "emotion": "^9.2.4",
+    "prop-types": "^15.6.2",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-emotion": "^9.2.4",
+    "react-icons": "^3.2.2",
+    "react-markdown": "^4.0.4",
     "react-router": "^4.2.0",
+    "react-spring": "^7.2.8",
     "react-static": "^5.9.12"
   },
   "devDependencies": {

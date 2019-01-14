@@ -39,7 +39,7 @@ export default {
   },
   renderToHtml: (render, Comp) => renderStylesToString(render(<Comp />)),
   Document: class CustomHtml extends Component {
-    render () {
+    render() {
       const {
         Html, Head, Body, children, renderMeta,
       } = this.props
@@ -49,7 +49,7 @@ export default {
           <Head>
             <meta charSet="UTF-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
-            <link href="https://fonts.googleapis.com/css?family=Lato|Merriweather" rel="stylesheet"></link>
+            <link href="https://fonts.googleapis.com/css?family=Lato|Roboto" rel="stylesheet" />
             {renderMeta.styleTags}
           </Head>
           <Body>{children}</Body>
