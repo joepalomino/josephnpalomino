@@ -47,12 +47,12 @@ export default class Home extends Component {
       <div>
         <div
           css={{
-            height: 'calc(100% - 38px)',
             position: 'relative',
+            cursor: 'pointer',
             width: '100%',
             height: this.state.index === 0 ? 685 : this.state.index === 1 ? 600 : 920,
             '@media (min-width: 768px)': {
-              height: 600,
+              height: 650,
             },
             '&>div': {
               willChange: 'transorm, opacity',
@@ -62,6 +62,7 @@ export default class Home extends Component {
             },
           }}
           onClick={this.toggleScreen}
+          role="button"
         >
           <Transition
             native

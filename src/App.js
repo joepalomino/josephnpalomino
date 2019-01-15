@@ -107,7 +107,7 @@ function App() {
               >
                 40°18'51.3"N 111°45'25.6"W
               </p>
-              <NavCta />
+              <NavCta label="Lets talk" src="sms:385-394-7174" />
             </div>
           </div>
         </Container>

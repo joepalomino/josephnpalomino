@@ -1,10 +1,10 @@
 import React from 'react'
 
 export default function Cta(props) {
-  const { className } = props
+  const { className, label, src } = props
   return (
     <a
-      href="sms:385-394-7174"
+      href={src}
       className={className}
       css={{
         ...className,
@@ -25,7 +25,7 @@ export default function Cta(props) {
       }}
       onClick={e => e.stopPropagation()}
     >
-      Lets Talk
+      {label}
     </a>
   )
 }

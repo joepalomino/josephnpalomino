@@ -4,6 +4,8 @@ import Container from './Container'
 
 import self from '../selfPhoto.jpg'
 import flowerWave from '../flower-wave.png'
+import resume from '../palomino-resume.pdf'
+import Cta from './Cta'
 
 About.propTypes = {
   text: string.isRequired,
@@ -71,6 +73,7 @@ export default function About(props) {
           I’m currently a full time member of The Hut Group’s engineering team. I also do freelance
           on the side with RenderCake.
         </p>
+        <Cta src={resume} label="Check out my resume" />
       </Container>
       <img
         src={flowerWave}

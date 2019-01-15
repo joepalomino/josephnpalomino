@@ -28,7 +28,7 @@ export default function Nav(props) {
             Skills
           </UnderListItem>
           <li>
-            <Cta />
+            <Cta src="sms:385-394-7174" label="Lets Talk" />
           </li>
         </ul>
       </nav>
