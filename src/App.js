@@ -105,7 +105,7 @@ function App() {
                   },
                 }}
               >
-                40°18'51.3"N 111°45'25.6"W
+                36.3729° N, 94.2088° W
               </p>
               <NavCta label="Lets talk" src="sms:385-394-7174" />
             </div>
