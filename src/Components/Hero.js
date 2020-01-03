@@ -25,7 +25,7 @@ export default function Hero(props) {
       >
         <div>
           <Header
-            text="I’m Joe, a multidisciplinary developer in Salt Lake. I help companies and entrepreneurs build digital experiences their users enjoy."
+            text="I’m Joe, a multidisciplinary developer in Bentonville AR. I help companies and entrepreneurs build digital experiences their users enjoy."
             onNavClick={props.onNavClick}
           />
           <div
